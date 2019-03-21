@@ -4,9 +4,9 @@ class PointsList {
   }
 
   /**
-   * 
-   * @param {String} item 
-   * @param {Number} n 
+   * Adds n (or 1) occurrences of item to the tracker.
+   * @param {string} item - name of item to track
+   * @param {number} n - optional number of occurrences. Default to 1
    */
   addItem(item, n) {
     if (! n) {
@@ -19,15 +19,15 @@ class PointsList {
   }
 
   /**
-   * 
-   * @param {} item 
+   * Removes all occurrences of item from tracker
+   * @param {string} item - name of item to remove
    */
   removeItem(item) {
     this.items = this.items.filter(i => i !== item);
   }
 
   /**
-   * 
+   * Gets a unique list of all items
    */
   getList() {
     const uniqueSet = new Set(this.items);
@@ -35,8 +35,8 @@ class PointsList {
   }
 
   /**
-   * 
-   * @param {*} weight 
+   * Calculates the scores for all items and returns a structure
+   * @param {number} weight - optional weight for scoring
    */
   tallyPoints(weight) {
     if (! weight) {
@@ -56,6 +56,10 @@ class OrderedTupleDict {
     this.dict = dict;
   }
 
+  /**
+   * Order the two dimensional array by second index
+   * @param {list} list - list of (fake) tuples aka. list of lists
+   */
   order(list) {
     return list.sort((a, b) => {
       if (a[1] > b[1]) {
@@ -67,6 +71,9 @@ class OrderedTupleDict {
     });
   }
 
+  /**
+   * Get the ordered list of fake tuples
+   */
   get() {
     const result = [];
 

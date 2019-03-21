@@ -4,8 +4,8 @@ const {PointsList, OrderedTupleDict} = require('./utils');
 class Langsense {
 
   /**
-   * 
-   * @param {*} string 
+   * Detect the language of a string
+   * @param {string} string - the string to analyse
    */
   detect(string) {
     string = string.toLowerCase();
@@ -34,8 +34,8 @@ class Langsense {
   }
 
   /**
-   * 
-   * @param {*} string 
+   * Do analysis of string based only on individual characters
+   * @param {string} string - the string to analyse
    */
   charShortlist(string) {
     const uniqueChars = new Set();
@@ -66,8 +66,8 @@ class Langsense {
   }
 
   /**
-   * 
-   * @param {*} string 
+   * Do analysis of string based only on word rules
+   * @param {string} string - the string to analyse
    */
   ruleShortlist(string) {
     const langs = new PointsList();
@@ -87,8 +87,8 @@ class Langsense {
   }
 
   /**
-   * 
-   * @param {*} string 
+   * Do analysis of string based only on word segments
+   * @param {string} string - the string to analyse
    */
   segmentShortlist(string) {
     const langs = new PointsList();
@@ -109,6 +109,10 @@ class Langsense {
     return langs.tallyPoints(Ruleset.weight.segment);
   }
 
+  /**
+   * Do analysis of string based only on common words
+   * @param {string} string - the string to analyse
+   */
   wordShortlist(string) {
     const langs = new PointsList();
 
