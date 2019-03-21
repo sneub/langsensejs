@@ -19,15 +19,16 @@ actually make sense.
 Langsense uses a list of basic language rules, found in `ruleset.js` , to make a
 pretty good guess at which language it is.
 
-Based on each rule, it will tally up a number of points based on each piece of
-evidence found, and give you a answer based on these points.
+With each rule, it will tally up a number of points based on each piece of
+evidence found, and give you an answer using the points as a level of
+confidence.
 
 Imagine you are in a cave. There is nobody around and no signal on your mobile
 device. You come across a piece of paper with some writing on it, and you wonder
 _Which language is this?_ You have only your own brain and experience to draw
 upon. How would you detect which language it is?
 
-Personally, I would start begin by looking to see which characters I can
+Personally, I would begin by looking to see which characters I can
 recognise. Is there anything that looks kinda like Russian? Chinese? Any
 interesting accents? This won't give us a definite answer, but it will help to
 narrow down the possibilities, at least.
