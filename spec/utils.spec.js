@@ -59,3 +59,17 @@ describe('PointsList', () => {
     expect(pointsList.tallyPoints(0.5)).toEqual({'bar': 1.5});
   });
 });
+
+describe('OrderedTupleDict', () => {
+  const {OrderedTupleDict} = require('../utils');
+
+  it('should return a two dimensional array from dict', function() {
+    const orderedTupleDict = new OrderedTupleDict({a: 1, b: 1});
+    expect(orderedTupleDict.get()).toEqual([['a', 1], ['b', 1]]);
+  });
+
+  it('should order by key descending', function() {
+    const orderedTupleDict = new OrderedTupleDict({a: 1, b: 2, c: 3});
+    expect(orderedTupleDict.get()).toEqual([['c', 3], ['b', 2], ['a', 1]]);
+  });
+});
