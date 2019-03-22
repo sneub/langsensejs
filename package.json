@@ -4,7 +4,7 @@
   "description": "Detect the language of text of any length",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/sneub/langsensejs/issues"
   },
-  "homepage": "https://github.com/sneub/langsensejs#readme"
+  "homepage": "https://github.com/sneub/langsensejs#readme",
+  "devDependencies": {
+    "jasmine": "^3.3.1"
+  }
 }
